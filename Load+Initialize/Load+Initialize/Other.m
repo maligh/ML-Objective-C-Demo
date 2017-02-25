@@ -14,4 +14,8 @@
     NSLog(@"Other:%s %@", __FUNCTION__, [self class]);
 }
 
++ (void)initialize {
+    NSLog(@"Other:%s %@", __FUNCTION__, [self class]);
+}
+
 @end
