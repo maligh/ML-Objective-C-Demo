@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		244766221E7813B600924320 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 244766211E7813B600924320 /* main.m */; };
+		244766251E7813B600924320 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 244766241E7813B600924320 /* AppDelegate.m */; };
+		244766281E7813B600924320 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 244766271E7813B600924320 /* ViewController.m */; };
+		2447662B1E7813B600924320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244766291E7813B600924320 /* Main.storyboard */; };
+		2447662D1E7813B600924320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2447662C1E7813B600924320 /* Assets.xcassets */; };
+		244766301E7813B600924320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2447662E1E7813B600924320 /* LaunchScreen.storyboard */; };
+		2447663B1E7813B600924320 /* MutablCopy_PropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2447663A1E7813B600924320 /* MutablCopy_PropertyTests.m */; };
+		244766461E7813B600924320 /* MutablCopy_PropertyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 244766451E7813B600924320 /* MutablCopy_PropertyUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		244766371E7813B600924320 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244766151E7813B600924320 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2447661C1E7813B600924320;
+			remoteInfo = "MutablCopy-Property";
+		};
+		244766421E7813B600924320 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244766151E7813B600924320 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2447661C1E7813B600924320;
+			remoteInfo = "MutablCopy-Property";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2447661D1E7813B600924320 /* MutablCopy-Property.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MutablCopy-Property.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		244766211E7813B600924320 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		244766231E7813B600924320 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		244766241E7813B600924320 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		244766261E7813B600924320 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		244766271E7813B600924320 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2447662A1E7813B600924320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2447662C1E7813B600924320 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2447662F1E7813B600924320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		244766311E7813B600924320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		244766361E7813B600924320 /* MutablCopy-PropertyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MutablCopy-PropertyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2447663A1E7813B600924320 /* MutablCopy_PropertyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutablCopy_PropertyTests.m; sourceTree = "<group>"; };
+		2447663C1E7813B600924320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		244766411E7813B600924320 /* MutablCopy-PropertyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MutablCopy-PropertyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		244766451E7813B600924320 /* MutablCopy_PropertyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutablCopy_PropertyUITests.m; sourceTree = "<group>"; };
+		244766471E7813B600924320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2447661A1E7813B600924320 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		244766331E7813B600924320 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2447663E1E7813B600924320 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		244766141E7813B600924320 = {
+			isa = PBXGroup;
+			children = (
+				2447661F1E7813B600924320 /* MutablCopy-Property */,
+				244766391E7813B600924320 /* MutablCopy-PropertyTests */,
+				244766441E7813B600924320 /* MutablCopy-PropertyUITests */,
+				2447661E1E7813B600924320 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2447661E1E7813B600924320 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2447661D1E7813B600924320 /* MutablCopy-Property.app */,
+				244766361E7813B600924320 /* MutablCopy-PropertyTests.xctest */,
+				244766411E7813B600924320 /* MutablCopy-PropertyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2447661F1E7813B600924320 /* MutablCopy-Property */ = {
+			isa = PBXGroup;
+			children = (
+				244766231E7813B600924320 /* AppDelegate.h */,
+				244766241E7813B600924320 /* AppDelegate.m */,
+				244766261E7813B600924320 /* ViewController.h */,
+				244766271E7813B600924320 /* ViewController.m */,
+				244766291E7813B600924320 /* Main.storyboard */,
+				2447662C1E7813B600924320 /* Assets.xcassets */,
+				2447662E1E7813B600924320 /* LaunchScreen.storyboard */,
+				244766311E7813B600924320 /* Info.plist */,
+				244766201E7813B600924320 /* Supporting Files */,
+			);
+			path = "MutablCopy-Property";
+			sourceTree = "<group>";
+		};
+		244766201E7813B600924320 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				244766211E7813B600924320 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		244766391E7813B600924320 /* MutablCopy-PropertyTests */ = {
+			isa = PBXGroup;
+			children = (
+				2447663A1E7813B600924320 /* MutablCopy_PropertyTests.m */,
+				2447663C1E7813B600924320 /* Info.plist */,
+			);
+			path = "MutablCopy-PropertyTests";
+			sourceTree = "<group>";
+		};
+		244766441E7813B600924320 /* MutablCopy-PropertyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				244766451E7813B600924320 /* MutablCopy_PropertyUITests.m */,
+				244766471E7813B600924320 /* Info.plist */,
+			);
+			path = "MutablCopy-PropertyUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2447661C1E7813B600924320 /* MutablCopy-Property */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2447664A1E7813B600924320 /* Build configuration list for PBXNativeTarget "MutablCopy-Property" */;
+			buildPhases = (
+				244766191E7813B600924320 /* Sources */,
+				2447661A1E7813B600924320 /* Frameworks */,
+				2447661B1E7813B600924320 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MutablCopy-Property";
+			productName = "MutablCopy-Property";
+			productReference = 2447661D1E7813B600924320 /* MutablCopy-Property.app */;
+			productType = "com.apple.product-type.application";
+		};
+		244766351E7813B600924320 /* MutablCopy-PropertyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2447664D1E7813B600924320 /* Build configuration list for PBXNativeTarget "MutablCopy-PropertyTests" */;
+			buildPhases = (
+				244766321E7813B600924320 /* Sources */,
+				244766331E7813B600924320 /* Frameworks */,
+				244766341E7813B600924320 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				244766381E7813B600924320 /* PBXTargetDependency */,
+			);
+			name = "MutablCopy-PropertyTests";
+			productName = "MutablCopy-PropertyTests";
+			productReference = 244766361E7813B600924320 /* MutablCopy-PropertyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		244766401E7813B600924320 /* MutablCopy-PropertyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 244766501E7813B600924320 /* Build configuration list for PBXNativeTarget "MutablCopy-PropertyUITests" */;
+			buildPhases = (
+				2447663D1E7813B600924320 /* Sources */,
+				2447663E1E7813B600924320 /* Frameworks */,
+				2447663F1E7813B600924320 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				244766431E7813B600924320 /* PBXTargetDependency */,
+			);
+			name = "MutablCopy-PropertyUITests";
+			productName = "MutablCopy-PropertyUITests";
+			productReference = 244766411E7813B600924320 /* MutablCopy-PropertyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		244766151E7813B600924320 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = mali;
+				TargetAttributes = {
+					2447661C1E7813B600924320 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					244766351E7813B600924320 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2447661C1E7813B600924320;
+					};
+					244766401E7813B600924320 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2447661C1E7813B600924320;
+					};
+				};
+			};
+			buildConfigurationList = 244766181E7813B600924320 /* Build configuration list for PBXProject "MutablCopy-Property" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 244766141E7813B600924320;
+			productRefGroup = 2447661E1E7813B600924320 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2447661C1E7813B600924320 /* MutablCopy-Property */,
+				244766351E7813B600924320 /* MutablCopy-PropertyTests */,
+				244766401E7813B600924320 /* MutablCopy-PropertyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2447661B1E7813B600924320 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				244766301E7813B600924320 /* LaunchScreen.storyboard in Resources */,
+				2447662D1E7813B600924320 /* Assets.xcassets in Resources */,
+				2447662B1E7813B600924320 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		244766341E7813B600924320 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2447663F1E7813B600924320 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		244766191E7813B600924320 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				244766281E7813B600924320 /* ViewController.m in Sources */,
+				244766251E7813B600924320 /* AppDelegate.m in Sources */,
+				244766221E7813B600924320 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		244766321E7813B600924320 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2447663B1E7813B600924320 /* MutablCopy_PropertyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2447663D1E7813B600924320 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				244766461E7813B600924320 /* MutablCopy_PropertyUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		244766381E7813B600924320 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2447661C1E7813B600924320 /* MutablCopy-Property */;
+			targetProxy = 244766371E7813B600924320 /* PBXContainerItemProxy */;
+		};
+		244766431E7813B600924320 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2447661C1E7813B600924320 /* MutablCopy-Property */;
+			targetProxy = 244766421E7813B600924320 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		244766291E7813B600924320 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2447662A1E7813B600924320 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2447662E1E7813B600924320 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2447662F1E7813B600924320 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		244766481E7813B600924320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		244766491E7813B600924320 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2447664B1E7813B600924320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "MutablCopy-Property/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mali.MutablCopy-Property";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2447664C1E7813B600924320 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "MutablCopy-Property/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mali.MutablCopy-Property";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2447664E1E7813B600924320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "MutablCopy-PropertyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mali.MutablCopy-PropertyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MutablCopy-Property.app/MutablCopy-Property";
+			};
+			name = Debug;
+		};
+		2447664F1E7813B600924320 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "MutablCopy-PropertyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mali.MutablCopy-PropertyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MutablCopy-Property.app/MutablCopy-Property";
+			};
+			name = Release;
+		};
+		244766511E7813B600924320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "MutablCopy-PropertyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mali.MutablCopy-PropertyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "MutablCopy-Property";
+			};
+			name = Debug;
+		};
+		244766521E7813B600924320 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "MutablCopy-PropertyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mali.MutablCopy-PropertyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "MutablCopy-Property";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		244766181E7813B600924320 /* Build configuration list for PBXProject "MutablCopy-Property" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				244766481E7813B600924320 /* Debug */,
+				244766491E7813B600924320 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2447664A1E7813B600924320 /* Build configuration list for PBXNativeTarget "MutablCopy-Property" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2447664B1E7813B600924320 /* Debug */,
+				2447664C1E7813B600924320 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2447664D1E7813B600924320 /* Build configuration list for PBXNativeTarget "MutablCopy-PropertyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2447664E1E7813B600924320 /* Debug */,
+				2447664F1E7813B600924320 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		244766501E7813B600924320 /* Build configuration list for PBXNativeTarget "MutablCopy-PropertyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				244766511E7813B600924320 /* Debug */,
+				244766521E7813B600924320 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 244766151E7813B600924320 /* Project object */;
+}
