@@ -2,7 +2,7 @@
 //  ViewController.m
 //  Copy-Strong-Array-MutableArray
 //
-//  Created by mjpc on 2017/3/15.
+//  Created by mali on 2017/3/15.
 //  Copyright © 2017年 mali. All rights reserved.
 //
 
@@ -10,20 +10,42 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) NSArray *arrayOfStrong;
+@property (nonatomic, copy) NSArray *arrayOfCopy;
+@property (nonatomic, strong) NSMutableArray *mutableArrayOfStrong;
+@property (nonatomic, copy) NSMutableArray *mutableArrayOfCopy;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithArray:@[@"A"]];
+    NSLog(@"mutableArray地址为 %p", mutableArray);
+    self.arrayOfStrong = mutableArray;
+    self.arrayOfCopy = mutableArray;
+    [mutableArray addObject:@"B"];
+    NSLog(@"arrayOfStrong:%@ 地址为%p",_arrayOfStrong, _arrayOfStrong);
+    NSLog(@"arrayOfCopy:%@ 地址为%p",_arrayOfCopy, _arrayOfCopy);
+    
+    
+    NSLog(@"------------------------------------------------------");
+    
+    self.mutableArrayOfStrong = mutableArray;
+    [_mutableArrayOfStrong addObject:@"C"];
+    
+    self.mutableArrayOfCopy = mutableArray;
+
+    NSLog(@"mutableArrayOfStrong:%@ 地址为%p",_mutableArrayOfStrong, _mutableArrayOfStrong);
+    NSLog(@"mutableArrayOfCopy's class is %@", [_mutableArrayOfCopy class]);
+    
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    //crash
+    [_mutableArrayOfCopy addObject:@"C"];
 }
-
 
 @end

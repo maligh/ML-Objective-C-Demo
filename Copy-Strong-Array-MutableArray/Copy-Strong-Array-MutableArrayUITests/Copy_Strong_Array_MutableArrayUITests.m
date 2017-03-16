@@ -2,7 +2,7 @@
 //  Copy_Strong_Array_MutableArrayUITests.m
 //  Copy-Strong-Array-MutableArrayUITests
 //
-//  Created by mjpc on 2017/3/15.
+//  Created by mali on 2017/3/15.
 //  Copyright © 2017年 mali. All rights reserved.
 //
 

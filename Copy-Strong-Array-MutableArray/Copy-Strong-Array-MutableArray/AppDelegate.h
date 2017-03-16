@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  Copy-Strong-Array-MutableArray
 //
-//  Created by mjpc on 2017/3/15.
+//  Created by mali on 2017/3/15.
 //  Copyright © 2017年 mali. All rights reserved.
 //
 
