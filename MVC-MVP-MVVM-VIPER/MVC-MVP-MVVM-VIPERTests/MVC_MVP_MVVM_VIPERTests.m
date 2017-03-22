@@ -2,7 +2,7 @@
 //  MVC_MVP_MVVM_VIPERTests.m
 //  MVC-MVP-MVVM-VIPERTests
 //
-//  Created by mjpc on 2017/3/22.
+//  Created by mali on 2017/3/22.
 //  Copyright © 2017年 mali. All rights reserved.
 //
 

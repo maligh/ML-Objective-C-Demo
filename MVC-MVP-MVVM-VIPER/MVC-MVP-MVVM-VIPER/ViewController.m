@@ -2,13 +2,18 @@
 //  ViewController.m
 //  MVC-MVP-MVVM-VIPER
 //
-//  Created by mjpc on 2017/3/22.
+//  Created by mali on 2017/3/22.
 //  Copyright © 2017年 mali. All rights reserved.
 //
 
 #import "ViewController.h"
+#import "MVCViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource> {
+    NSArray *dataArray_;
+}
+
+@property (nonatomic, strong) UITableView *mainTableView;
 
 @end
 
@@ -16,14 +21,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.mainTableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    _mainTableView.delegate = self;
+    _mainTableView.dataSource = self;
+    [self.view addSubview:_mainTableView];
+    dataArray_ = @[@"MVC", @"MVP", @"MVVM", @"VIPER"];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return dataArray_.count;
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    cell.textLabel.text = dataArray_[indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIViewController *VC;
+    switch (indexPath.row) {
+        case 0:{
+            VC= [[MVCViewController alloc] init];
+            [self.navigationController pushViewController:VC animated:YES];
+        }
+            break;
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        default:
+            break;
+    }
+    
+}
+
 
 
 @end

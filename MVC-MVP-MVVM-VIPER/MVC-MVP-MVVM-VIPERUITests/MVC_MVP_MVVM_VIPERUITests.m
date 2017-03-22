@@ -2,7 +2,7 @@
 //  MVC_MVP_MVVM_VIPERUITests.m
 //  MVC-MVP-MVVM-VIPERUITests
 //
-//  Created by mjpc on 2017/3/22.
+//  Created by mali on 2017/3/22.
 //  Copyright © 2017年 mali. All rights reserved.
 //
 

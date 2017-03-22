@@ -15,6 +15,9 @@
 		10E984381E82C0E5008B3123 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E984361E82C0E5008B3123 /* LaunchScreen.storyboard */; };
 		10E984431E82C0E5008B3123 /* MVC_MVP_MVVM_VIPERTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E984421E82C0E5008B3123 /* MVC_MVP_MVVM_VIPERTests.m */; };
 		10E9844E1E82C0E5008B3123 /* MVC_MVP_MVVM_VIPERUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E9844D1E82C0E5008B3123 /* MVC_MVP_MVVM_VIPERUITests.m */; };
+		10E984611E82C1BB008B3123 /* MVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E984601E82C1BB008B3123 /* MVCViewController.m */; };
+		10E984641E82C1FA008B3123 /* MVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E984631E82C1FA008B3123 /* MVCModel.m */; };
+		10E984671E82C209008B3123 /* MVCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E984661E82C209008B3123 /* MVCView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		10E984491E82C0E5008B3123 /* MVC-MVP-MVVM-VIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVC-MVP-MVVM-VIPERUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E9844D1E82C0E5008B3123 /* MVC_MVP_MVVM_VIPERUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVC_MVP_MVVM_VIPERUITests.m; sourceTree = "<group>"; };
 		10E9844F1E82C0E5008B3123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10E9845F1E82C1BB008B3123 /* MVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVCViewController.h; sourceTree = "<group>"; };
+		10E984601E82C1BB008B3123 /* MVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVCViewController.m; sourceTree = "<group>"; };
+		10E984621E82C1FA008B3123 /* MVCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVCModel.h; sourceTree = "<group>"; };
+		10E984631E82C1FA008B3123 /* MVCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVCModel.m; sourceTree = "<group>"; };
+		10E984651E82C209008B3123 /* MVCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVCView.h; sourceTree = "<group>"; };
+		10E984661E82C209008B3123 /* MVCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVCView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,10 @@
 		10E984271E82C0E5008B3123 /* MVC-MVP-MVVM-VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				10E9845E1E82C17F008B3123 /* MVC */,
+				10E9845C1E82C17F008B3123 /* MVP */,
+				10E9845D1E82C17F008B3123 /* MVVM */,
+				10E9845B1E82C17F008B3123 /* VIPER */,
 				10E9842B1E82C0E5008B3123 /* AppDelegate.h */,
 				10E9842C1E82C0E5008B3123 /* AppDelegate.m */,
 				10E9842E1E82C0E5008B3123 /* ViewController.h */,
@@ -138,6 +151,40 @@
 				10E9844F1E82C0E5008B3123 /* Info.plist */,
 			);
 			path = "MVC-MVP-MVVM-VIPERUITests";
+			sourceTree = "<group>";
+		};
+		10E9845B1E82C17F008B3123 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		10E9845C1E82C17F008B3123 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		10E9845D1E82C17F008B3123 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		10E9845E1E82C17F008B3123 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				10E9845F1E82C1BB008B3123 /* MVCViewController.h */,
+				10E984601E82C1BB008B3123 /* MVCViewController.m */,
+				10E984621E82C1FA008B3123 /* MVCModel.h */,
+				10E984631E82C1FA008B3123 /* MVCModel.m */,
+				10E984651E82C209008B3123 /* MVCView.h */,
+				10E984661E82C209008B3123 /* MVCView.m */,
+			);
+			path = MVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +321,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				10E984301E82C0E5008B3123 /* ViewController.m in Sources */,
+				10E984671E82C209008B3123 /* MVCView.m in Sources */,
 				10E9842D1E82C0E5008B3123 /* AppDelegate.m in Sources */,
+				10E984641E82C1FA008B3123 /* MVCModel.m in Sources */,
 				10E9842A1E82C0E5008B3123 /* main.m in Sources */,
+				10E984611E82C1BB008B3123 /* MVCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
