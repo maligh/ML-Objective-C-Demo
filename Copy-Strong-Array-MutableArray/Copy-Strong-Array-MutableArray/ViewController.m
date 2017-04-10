@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSArray *arrayOfStrong;
 @property (nonatomic, copy) NSArray *arrayOfCopy;
+@property (nonatomic, copy) NSArray *arrayOfCopy2;
 @property (nonatomic, strong) NSMutableArray *mutableArrayOfStrong;
 @property (nonatomic, copy) NSMutableArray *mutableArrayOfCopy;
 
@@ -26,9 +27,12 @@
     NSLog(@"mutableArray地址为 %p", mutableArray);
     self.arrayOfStrong = mutableArray;
     self.arrayOfCopy = mutableArray;
+    _arrayOfCopy2 = mutableArray;
+    
     [mutableArray addObject:@"B"];
     NSLog(@"arrayOfStrong:%@ 地址为%p",_arrayOfStrong, _arrayOfStrong);
     NSLog(@"arrayOfCopy:%@ 地址为%p",_arrayOfCopy, _arrayOfCopy);
+    NSLog(@"arrayOfCopy2:%@ 地址为%p", _arrayOfCopy2, _arrayOfCopy2);
     
     
     NSLog(@"------------------------------------------------------");
@@ -40,12 +44,12 @@
 
     NSLog(@"mutableArrayOfStrong:%@ 地址为%p",_mutableArrayOfStrong, _mutableArrayOfStrong);
     NSLog(@"mutableArrayOfCopy's class is %@", [_mutableArrayOfCopy class]);
-    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     //crash
     [_mutableArrayOfCopy addObject:@"C"];
 }
+
 
 @end
