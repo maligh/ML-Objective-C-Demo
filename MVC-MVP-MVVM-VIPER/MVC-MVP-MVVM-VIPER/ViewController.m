@@ -33,17 +33,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    static NSString *cellId = @"CellId";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    }
     cell.textLabel.text = dataArray_[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UIViewController *VC;
     switch (indexPath.row) {
         case 0:{
-            VC= [[MVCViewController alloc] init];
+            MVCViewController *VC= [[MVCViewController alloc] init];
             [self.navigationController pushViewController:VC animated:YES];
         }
             break;

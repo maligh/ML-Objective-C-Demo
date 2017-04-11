@@ -10,4 +10,6 @@
 
 @interface MVCModel : NSObject
 
+@property (nonatomic, copy) NSString *text;
+
 @end

@@ -7,8 +7,13 @@
 //
 
 #import "MVCViewController.h"
+#import "MVCModel.h"
+#import "MVCView.h"
 
 @interface MVCViewController ()
+
+@property (nonatomic, strong) MVCView *subview;
+@property (nonatomic, strong) MVCModel *model;
 
 @end
 
@@ -16,6 +21,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    MVCModel *model = [[MVCModel alloc] init];
+    model.text = @"text";
+    self.subview = [MVCView initwithModel:model];
+    
+    __weak typeof(self)weakSelf = self;
+    __weak MVCModel *weakModel = model;
+    _subview.buttonClickBlock = ^() {
+        weakModel.text = [NSString stringWithFormat:@"%d", rand()];
+        weakSelf.subview.model = weakSelf.model;
+    };
+
+    [self.view addSubview:_subview];
 }
+
+
 
 @end
