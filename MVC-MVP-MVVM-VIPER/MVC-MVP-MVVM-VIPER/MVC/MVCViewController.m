@@ -22,20 +22,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    MVCModel *model = [[MVCModel alloc] init];
-    model.text = @"text";
-    self.subview = [MVCView initwithModel:model];
+    self.model = [[MVCModel alloc] init];
+    [_model setValue:@"Init Text" forKey:@"text"];
+    [_model addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    
+    self.subview = [[MVCView alloc] initWithFrame:self.view.bounds];
+    _subview.viewText = [_model valueForKey:@"text"];
+    [self.view addSubview:_subview];
     
     __weak typeof(self)weakSelf = self;
-    __weak MVCModel *weakModel = model;
     _subview.buttonClickBlock = ^() {
-        weakModel.text = [NSString stringWithFormat:@"%d", rand()];
-        weakSelf.subview.model = weakSelf.model;
+        [weakSelf.model setValue:[NSString stringWithFormat:@"%d", rand()] forKey:@"text"];
     };
 
-    [self.view addSubview:_subview];
+    
 }
 
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if([keyPath isEqualToString:@"text"]) {
+        _subview.viewText = [_model valueForKey:@"text"];
+    }
+}
+
+- (void)dealloc {
+    [_model removeObserver:self forKeyPath:@"text"];
+}
 
 
 @end
