@@ -17,13 +17,6 @@
 
 @implementation MVCView
 
-+ (instancetype)initwithModel:(MVCModel *)model {
-    MVCView *view = [[MVCView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    view.model = model;
-    return view;
-}
-
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -46,9 +39,6 @@
     [self addSubview:_button];
 }
 
-- (void)refreshViewWithModel:(MVCModel *)model {
-    _label.text = _model.text;
-}
 
 #pragma mark - ================ Actions =================
 
@@ -58,11 +48,11 @@
     }
 }
 
-#pragma mark - ================ Getter and Setter =================
+#pragma mark - ================ Getter and setter =================
 
-- (void)setModel:(MVCModel *)model {
-    _model = model;
-    [self refreshViewWithModel:model];
+- (void)setViewText:(NSString *)viewText {
+    _viewText = viewText;
+    _label.text = _viewText;
 }
 
 @end
