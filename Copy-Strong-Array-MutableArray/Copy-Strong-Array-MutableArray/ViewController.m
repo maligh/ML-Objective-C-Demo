@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.view.frame
     NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithArray:@[@"A"]];
     NSLog(@"mutableArray地址为 %p", mutableArray);
     self.arrayOfStrong = mutableArray;

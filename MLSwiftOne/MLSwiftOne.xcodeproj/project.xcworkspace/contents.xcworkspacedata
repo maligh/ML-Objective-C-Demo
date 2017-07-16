@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MVC-MVP-MVVM-VIPER.xcodeproj">
+      location = "self:MLSwiftOne.xcodeproj">
    </FileRef>
 </Workspace>
