@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "People.h"
 
 @interface ViewController ()
 
@@ -16,14 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    People *people = [[People alloc] init];
+    [people performSelector:@selector(speak)];
+    [people performSelector:@selector(fly)];
+    [people performSelector:@selector(code)];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    People *people = [[People alloc] init];
+    [people performSelector:@selector(missMethod)];
 }
-
 
 @end

@@ -10,4 +10,8 @@
 
 @implementation Monkey
 
+- (void)code {
+    NSLog(@"I am a coder.");
+}
+
 @end

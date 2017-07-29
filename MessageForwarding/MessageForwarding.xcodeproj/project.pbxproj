@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1051007A1F2CE6E300413971 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = 105100791F2CE6E300413971 /* Bird.m */; };
+		1051007D1F2CED1200413971 /* Monkey.m in Sources */ = {isa = PBXBuildFile; fileRef = 1051007C1F2CED1200413971 /* Monkey.m */; };
 		105CE9A91F2C5F1D00FAE87D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 105CE9A81F2C5F1D00FAE87D /* main.m */; };
 		105CE9AC1F2C5F1D00FAE87D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 105CE9AB1F2C5F1D00FAE87D /* AppDelegate.m */; };
 		105CE9AF1F2C5F1D00FAE87D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105CE9AE1F2C5F1D00FAE87D /* ViewController.m */; };
@@ -15,6 +17,7 @@
 		105CE9B71F2C5F1D00FAE87D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105CE9B51F2C5F1D00FAE87D /* LaunchScreen.storyboard */; };
 		105CE9C21F2C5F1D00FAE87D /* MessageForwardingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 105CE9C11F2C5F1D00FAE87D /* MessageForwardingTests.m */; };
 		105CE9CD1F2C5F1D00FAE87D /* MessageForwardingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 105CE9CC1F2C5F1D00FAE87D /* MessageForwardingUITests.m */; };
+		105CE9DC1F2C602900FAE87D /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 105CE9DB1F2C602900FAE87D /* People.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		105100781F2CE6E300413971 /* Bird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
+		105100791F2CE6E300413971 /* Bird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
+		1051007B1F2CED1200413971 /* Monkey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monkey.h; sourceTree = "<group>"; };
+		1051007C1F2CED1200413971 /* Monkey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monkey.m; sourceTree = "<group>"; };
 		105CE9A41F2C5F1D00FAE87D /* MessageForwarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageForwarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105CE9A81F2C5F1D00FAE87D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		105CE9AA1F2C5F1D00FAE87D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +58,8 @@
 		105CE9C81F2C5F1D00FAE87D /* MessageForwardingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageForwardingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		105CE9CC1F2C5F1D00FAE87D /* MessageForwardingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageForwardingUITests.m; sourceTree = "<group>"; };
 		105CE9CE1F2C5F1D00FAE87D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		105CE9DA1F2C602900FAE87D /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		105CE9DB1F2C602900FAE87D /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +114,12 @@
 				105CE9AB1F2C5F1D00FAE87D /* AppDelegate.m */,
 				105CE9AD1F2C5F1D00FAE87D /* ViewController.h */,
 				105CE9AE1F2C5F1D00FAE87D /* ViewController.m */,
+				105CE9DA1F2C602900FAE87D /* People.h */,
+				105CE9DB1F2C602900FAE87D /* People.m */,
+				105100781F2CE6E300413971 /* Bird.h */,
+				105100791F2CE6E300413971 /* Bird.m */,
+				1051007B1F2CED1200413971 /* Monkey.h */,
+				1051007C1F2CED1200413971 /* Monkey.m */,
 				105CE9B01F2C5F1D00FAE87D /* Main.storyboard */,
 				105CE9B31F2C5F1D00FAE87D /* Assets.xcassets */,
 				105CE9B51F2C5F1D00FAE87D /* LaunchScreen.storyboard */,
@@ -273,6 +288,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1051007D1F2CED1200413971 /* Monkey.m in Sources */,
+				1051007A1F2CE6E300413971 /* Bird.m in Sources */,
+				105CE9DC1F2C602900FAE87D /* People.m in Sources */,
 				105CE9AF1F2C5F1D00FAE87D /* ViewController.m in Sources */,
 				105CE9AC1F2C5F1D00FAE87D /* AppDelegate.m in Sources */,
 				105CE9A91F2C5F1D00FAE87D /* main.m in Sources */,
@@ -507,6 +525,7 @@
 				105CE9D31F2C5F1D00FAE87D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		105CE9D41F2C5F1D00FAE87D /* Build configuration list for PBXNativeTarget "MessageForwardingTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +534,7 @@
 				105CE9D61F2C5F1D00FAE87D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		105CE9D71F2C5F1D00FAE87D /* Build configuration list for PBXNativeTarget "MessageForwardingUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +543,7 @@
 				105CE9D91F2C5F1D00FAE87D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,4 +10,6 @@
 
 @interface Bird : NSObject
 
+- (void)fly;
+
 @end

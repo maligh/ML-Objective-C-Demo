@@ -10,4 +10,6 @@
 
 @interface Monkey : NSObject
 
+- (void)code;
+
 @end

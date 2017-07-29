@@ -10,4 +10,8 @@
 
 @implementation Bird
 
+- (void)fly {
+    NSLog(@"I am a bird, I can fly.");
+}
+
 @end
