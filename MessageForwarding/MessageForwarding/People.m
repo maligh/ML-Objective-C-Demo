@@ -52,4 +52,9 @@ void speak(id self, SEL _cmd){
     return [super methodSignatureForSelector:aSelector];
 }
 
+- (void)doesNotRecognizeSelector:(SEL)aSelector {
+    NSLog(@"doesNotRecognizeSelector: %@", NSStringFromSelector(aSelector));
+    [super doesNotRecognizeSelector:aSelector];
+}
+
 @end

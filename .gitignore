@@ -97,3 +97,5 @@ iOSInjectionProject/
 ### Objective-C Patch ###
 
 # End of https://www.gitignore.io/api/objective-c,macos
+/Load+Initialize/.DS_Store
+/Load+Initialize/Load+Initialize.xcodeproj/project.xcworkspace/xcuserdata/mjpc.xcuserdatad/UserInterfaceState.xcuserstate
