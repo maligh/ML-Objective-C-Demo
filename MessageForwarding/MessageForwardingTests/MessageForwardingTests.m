@@ -1,18 +1,18 @@
 //
-//  MVC_MVP_MVVM_VIPERTests.m
-//  MVC-MVP-MVVM-VIPERTests
+//  MessageForwardingTests.m
+//  MessageForwardingTests
 //
-//  Created by mali on 2017/3/22.
+//  Created by mjpc on 2017/7/29.
 //  Copyright © 2017年 mali. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface MVC_MVP_MVVM_VIPERTests : XCTestCase
+@interface MessageForwardingTests : XCTestCase
 
 @end
 
-@implementation MVC_MVP_MVVM_VIPERTests
+@implementation MessageForwardingTests
 
 - (void)setUp {
     [super setUp];

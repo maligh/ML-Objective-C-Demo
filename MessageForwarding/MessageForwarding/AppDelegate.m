@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  MVC-MVP-MVVM-VIPER
+//  MessageForwarding
 //
-//  Created by mali on 2017/3/22.
+//  Created by mjpc on 2017/7/29.
 //  Copyright © 2017年 mali. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,12 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    ViewController *rootVC = [ViewController new];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootVC];
-    self.window.rootViewController = navigationController;
+    // Override point for customization after application launch.
     return YES;
 }
 
