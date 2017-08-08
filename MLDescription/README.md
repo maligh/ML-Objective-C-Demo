@@ -1,0 +1,2 @@
+# README
+只是记录使用description方法的一个小idea,还没有完成，希望以后能做到跟xcode那样信息全面
