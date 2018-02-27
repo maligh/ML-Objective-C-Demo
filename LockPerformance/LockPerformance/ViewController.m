@@ -247,17 +247,17 @@ int TimeCount = 0;
 }
 
 - (void)printTimeConst:(NSTimeInterval *)timeCosts {
-    NSString *OSSpinLock = [NSString stringWithFormat:@"OSSpinLock:               %8.2f ms\n", TimeCosts[LockTypeOSSpinLock] * 1000];
+    NSString *OSSpinLock = [NSString stringWithFormat:@"OSSpinLock:               %8.2f ms\n", timeCosts[LockTypeOSSpinLock] * 1000];
     NSString *dispatch_semaphore = [NSString stringWithFormat:@"dispatch_semaphore:       %8.2f ms\n", TimeCosts[LockTypedispatch_semaphore] * 1000];
-    NSString *pthread_mutex = [NSString stringWithFormat:@"pthread_mutex:            %8.2f ms\n", TimeCosts[LockTypepthread_mutex] * 1000];
-    NSString *NSCondition = [NSString stringWithFormat:@"NSCondition:              %8.2f ms\n", TimeCosts[LockTypeNSCondition] * 1000];
-    NSString *NSLock = [NSString stringWithFormat:@"NSLock:                   %8.2f ms\n", TimeCosts[LockTypeNSLock] * 1000];
-    NSString *pthread_mutex_recursive = [NSString stringWithFormat:@"pthread_mutex(recursive): %8.2f ms\n", TimeCosts[LockTypepthread_mutex_recursive] * 1000];
-    NSString *NSRecursiveLock = [NSString stringWithFormat:@"NSRecursiveLock:          %8.2f ms\n", TimeCosts[LockTypeNSRecursiveLock] * 1000];
-    NSString *NSConditionLock = [NSString stringWithFormat:@"NSConditionLock:          %8.2f ms\n", TimeCosts[LockTypeNSConditionLock] * 1000];
-    NSString *pthread_rwlock = [NSString stringWithFormat:@"pthread_rwlock:           %8.2f ms\n", TimeCosts[LockTypepthread_rwlock] * 1000];
-    NSString *os_unfair_lock = [NSString stringWithFormat:@"os_unfair_lock:           %8.2f ms\n", TimeCosts[LockTypeos_unfair_lock] * 1000];
-    NSString *synchronized = [NSString stringWithFormat:@"@synchronized:            %8.2f ms\n", TimeCosts[LockTypesynchronized] * 1000];
+    NSString *pthread_mutex = [NSString stringWithFormat:@"pthread_mutex:            %8.2f ms\n", timeCosts[LockTypepthread_mutex] * 1000];
+    NSString *NSCondition = [NSString stringWithFormat:@"NSCondition:              %8.2f ms\n", timeCosts[LockTypeNSCondition] * 1000];
+    NSString *NSLock = [NSString stringWithFormat:@"NSLock:                   %8.2f ms\n", timeCosts[LockTypeNSLock] * 1000];
+    NSString *pthread_mutex_recursive = [NSString stringWithFormat:@"pthread_mutex(recursive): %8.2f ms\n", timeCosts[LockTypepthread_mutex_recursive] * 1000];
+    NSString *NSRecursiveLock = [NSString stringWithFormat:@"NSRecursiveLock:          %8.2f ms\n", timeCosts[LockTypeNSRecursiveLock] * 1000];
+    NSString *NSConditionLock = [NSString stringWithFormat:@"NSConditionLock:          %8.2f ms\n", timeCosts[LockTypeNSConditionLock] * 1000];
+    NSString *pthread_rwlock = [NSString stringWithFormat:@"pthread_rwlock:           %8.2f ms\n", timeCosts[LockTypepthread_rwlock] * 1000];
+    NSString *os_unfair_lock = [NSString stringWithFormat:@"os_unfair_lock:           %8.2f ms\n", timeCosts[LockTypeos_unfair_lock] * 1000];
+    NSString *synchronized = [NSString stringWithFormat:@"@synchronized:            %8.2f ms\n", timeCosts[LockTypesynchronized] * 1000];
     
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeOSSpinLock] * 1000] forKey:OSSpinLock];
