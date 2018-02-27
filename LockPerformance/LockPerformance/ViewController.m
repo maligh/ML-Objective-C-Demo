@@ -23,7 +23,6 @@ typedef NS_ENUM(NSUInteger, LockType) {
     LockTypeNSRecursiveLock,
     LockTypeNSConditionLock,
     LockTypesynchronized,
-    LockTypepthread_rwlock,
     LockTypeos_unfair_lock,
     LockTypeCount,
 };
@@ -205,18 +204,6 @@ int TimeCount = 0;
     }
     
     {
-        pthread_rwlock_t rwlock = PTHREAD_RWLOCK_INITIALIZER;
-        begin = CACurrentMediaTime();
-        for (int i = 0; i < count; i++) {
-            pthread_rwlock_wrlock(&rwlock);
-            pthread_rwlock_unlock(&rwlock);
-        }
-        end = CACurrentMediaTime();
-        TimeCosts[LockTypepthread_rwlock] += end - begin;
-        timeCosts[LockTypepthread_rwlock] = end - begin;
-    }
-    
-    {
         os_unfair_lock_t unfairLock;
         unfairLock = &(OS_UNFAIR_LOCK_INIT);
         begin = CACurrentMediaTime();
@@ -247,30 +234,28 @@ int TimeCount = 0;
 }
 
 - (void)printTimeConst:(NSTimeInterval *)timeCosts {
-    NSString *OSSpinLock = [NSString stringWithFormat:@"OSSpinLock:               %8.2f ms\n", timeCosts[LockTypeOSSpinLock] * 1000000];
-    NSString *dispatch_semaphore = [NSString stringWithFormat:@"dispatch_semaphore:       %8.2f ms\n", timeCosts[LockTypedispatch_semaphore] * 1000000];
-    NSString *pthread_mutex = [NSString stringWithFormat:@"pthread_mutex:            %8.2f ms\n", timeCosts[LockTypepthread_mutex] * 1000000];
-    NSString *NSCondition = [NSString stringWithFormat:@"NSCondition:              %8.2f ms\n", timeCosts[LockTypeNSCondition] * 1000000];
-    NSString *NSLock = [NSString stringWithFormat:@"NSLock:                   %8.2f ms\n", timeCosts[LockTypeNSLock] * 1000000];
-    NSString *pthread_mutex_recursive = [NSString stringWithFormat:@"pthread_mutex(recursive): %8.2f ms\n", timeCosts[LockTypepthread_mutex_recursive] * 1000000];
-    NSString *NSRecursiveLock = [NSString stringWithFormat:@"NSRecursiveLock:          %8.2f ms\n", timeCosts[LockTypeNSRecursiveLock] * 1000000];
-    NSString *NSConditionLock = [NSString stringWithFormat:@"NSConditionLock:          %8.2f ms\n", timeCosts[LockTypeNSConditionLock] * 1000000];
-    NSString *pthread_rwlock = [NSString stringWithFormat:@"pthread_rwlock:           %8.2f ms\n", timeCosts[LockTypepthread_rwlock] * 1000000];
-    NSString *os_unfair_lock = [NSString stringWithFormat:@"os_unfair_lock:           %8.2f ms\n", timeCosts[LockTypeos_unfair_lock] * 1000000];
-    NSString *synchronized = [NSString stringWithFormat:@"@synchronized:            %8.2f ms\n", timeCosts[LockTypesynchronized] * 1000000];
+    NSString *OSSpinLock = [NSString stringWithFormat:@"OSSpinLock:               %8.2f ms\n", timeCosts[LockTypeOSSpinLock] * 1000];
+    NSString *dispatch_semaphore = [NSString stringWithFormat:@"dispatch_semaphore:       %8.2f ms\n", timeCosts[LockTypedispatch_semaphore] * 1000];
+    NSString *pthread_mutex = [NSString stringWithFormat:@"pthread_mutex:            %8.2f ms\n", timeCosts[LockTypepthread_mutex] * 1000];
+    NSString *NSCondition = [NSString stringWithFormat:@"NSCondition:              %8.2f ms\n", timeCosts[LockTypeNSCondition] * 1000];
+    NSString *NSLock = [NSString stringWithFormat:@"NSLock:                   %8.2f ms\n", timeCosts[LockTypeNSLock] * 1000];
+    NSString *pthread_mutex_recursive = [NSString stringWithFormat:@"pthread_mutex(recursive): %8.2f ms\n", timeCosts[LockTypepthread_mutex_recursive] * 1000];
+    NSString *NSRecursiveLock = [NSString stringWithFormat:@"NSRecursiveLock:          %8.2f ms\n", timeCosts[LockTypeNSRecursiveLock] * 1000];
+    NSString *NSConditionLock = [NSString stringWithFormat:@"NSConditionLock:          %8.2f ms\n", timeCosts[LockTypeNSConditionLock] * 1000];
+    NSString *os_unfair_lock = [NSString stringWithFormat:@"os_unfair_lock:           %8.2f ms\n", timeCosts[LockTypeos_unfair_lock] * 1000];
+    NSString *synchronized = [NSString stringWithFormat:@"@synchronized:            %8.2f ms\n", timeCosts[LockTypesynchronized] * 1000];
     
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeOSSpinLock] * 1000000] forKey:OSSpinLock];
-    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypedispatch_semaphore] * 1000000] forKey:dispatch_semaphore];
-    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypepthread_mutex] * 1000000] forKey:pthread_mutex];
-    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeNSCondition] * 1000000] forKey:NSCondition];
-    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeNSLock] * 1000000] forKey:NSLock];
-    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypepthread_mutex_recursive] * 1000000] forKey:pthread_mutex_recursive];
-    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeNSRecursiveLock] * 1000000] forKey:NSRecursiveLock];
-    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeNSConditionLock] * 1000000] forKey:NSConditionLock];
-    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypepthread_rwlock] * 1000000] forKey:pthread_rwlock];
-    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeos_unfair_lock] * 1000000] forKey:os_unfair_lock];
-    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypesynchronized] * 1000000] forKey:synchronized];
+    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeOSSpinLock] * 1000] forKey:OSSpinLock];
+    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypedispatch_semaphore] * 1000] forKey:dispatch_semaphore];
+    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypepthread_mutex] * 1000] forKey:pthread_mutex];
+    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeNSCondition] * 1000] forKey:NSCondition];
+    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeNSLock] * 1000] forKey:NSLock];
+    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypepthread_mutex_recursive] * 1000] forKey:pthread_mutex_recursive];
+    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeNSRecursiveLock] * 1000] forKey:NSRecursiveLock];
+    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeNSConditionLock] * 1000] forKey:NSConditionLock];
+    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeos_unfair_lock] * 1000] forKey:os_unfair_lock];
+    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypesynchronized] * 1000] forKey:synchronized];
     
     NSArray *relustArray =  [dict keysSortedByValueUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
         if ([obj1 doubleValue] > [obj2 doubleValue]) {
