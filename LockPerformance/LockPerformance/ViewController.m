@@ -23,6 +23,7 @@ typedef NS_ENUM(NSUInteger, LockType) {
     LockTypeNSRecursiveLock,
     LockTypeNSConditionLock,
     LockTypesynchronized,
+    LockTypepthread_rwlock,
     LockTypeos_unfair_lock,
     LockTypeCount,
 };
@@ -204,6 +205,18 @@ int TimeCount = 0;
     }
     
     {
+        pthread_rwlock_t rwlock = PTHREAD_RWLOCK_INITIALIZER;
+        begin = CACurrentMediaTime();
+        for (int i = 0; i < count; i++) {
+            pthread_rwlock_wrlock(&rwlock);
+            pthread_rwlock_unlock(&rwlock);
+        }
+        end = CACurrentMediaTime();
+        TimeCosts[LockTypepthread_rwlock] += end - begin;
+        timeCosts[LockTypepthread_rwlock] = end - begin;
+    }
+    
+    {
         os_unfair_lock_t unfairLock;
         unfairLock = &(OS_UNFAIR_LOCK_INIT);
         begin = CACurrentMediaTime();
@@ -242,6 +255,7 @@ int TimeCount = 0;
     NSString *pthread_mutex_recursive = [NSString stringWithFormat:@"pthread_mutex(recursive): %8.2f ms\n", timeCosts[LockTypepthread_mutex_recursive] * 1000];
     NSString *NSRecursiveLock = [NSString stringWithFormat:@"NSRecursiveLock:          %8.2f ms\n", timeCosts[LockTypeNSRecursiveLock] * 1000];
     NSString *NSConditionLock = [NSString stringWithFormat:@"NSConditionLock:          %8.2f ms\n", timeCosts[LockTypeNSConditionLock] * 1000];
+    NSString *pthread_rwlock = [NSString stringWithFormat:@"pthread_rwlock:           %8.2f ms\n", timeCosts[LockTypepthread_rwlock] * 1000];
     NSString *os_unfair_lock = [NSString stringWithFormat:@"os_unfair_lock:           %8.2f ms\n", timeCosts[LockTypeos_unfair_lock] * 1000];
     NSString *synchronized = [NSString stringWithFormat:@"@synchronized:            %8.2f ms\n", timeCosts[LockTypesynchronized] * 1000];
     
@@ -254,6 +268,7 @@ int TimeCount = 0;
     [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypepthread_mutex_recursive] * 1000] forKey:pthread_mutex_recursive];
     [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeNSRecursiveLock] * 1000] forKey:NSRecursiveLock];
     [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeNSConditionLock] * 1000] forKey:NSConditionLock];
+    [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypepthread_rwlock] * 1000] forKey:pthread_rwlock];
     [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypeos_unfair_lock] * 1000] forKey:os_unfair_lock];
     [dict setObject:[NSString stringWithFormat:@"%8.2f", timeCosts[LockTypesynchronized] * 1000] forKey:synchronized];
     
