@@ -5,6 +5,7 @@ Demo|Article or Description
 ---|---
 Load+Initialize|http://www.jianshu.com/p/ffdefa76e4a2
 MessageForwarding | http://www.jianshu.com/p/f9bd98ad5b05
+LockPerformance|https://www.jianshu.com/p/b1edc6b0937a
 
 ---
 
